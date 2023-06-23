@@ -37,7 +37,7 @@ from keras_tuner.tuners import RandomSearch
 from keras_tuner import HyperParameters
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Data loader ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-loader = "C:\\Users\szp0155\OneDrive - Auburn University\Desktop\Gap-Time\\Neural\data_2.csv"
+loader = "...\data_2.csv" # DL and save the provided CSV file in the same location as this code
 df = pd.read_csv(loader)
 
 # df = df.drop(['Machine'], axis=1)
