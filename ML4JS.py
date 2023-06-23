@@ -129,8 +129,6 @@ def mlp(X, y):
     model = MLPRegressor(hidden_layer_sizes=(50, 100, 50), max_iter=2000, activation='relu', solver='adam',
                           learning_rate='constant', alpha=0.0001)
 
-
-
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
@@ -206,7 +204,6 @@ def deep_tuner (X,y):
 def deep(X,y):
     X_train, X_test, y_train, y_test = train_test_split(X, (y.ravel()), test_size=0.2, random_state=rnd)
 
-
     model = Sequential()
     model.add(Dense(224, input_shape=(len(instances),), activation='relu'))       #0
     model.add(Dense(256, activation='relu'))      #1
@@ -248,11 +245,9 @@ def saver(combined):
     dft.to_csv('Results_Vs_Prediction.csv', mode='a', index=True)
     print('file saved!!')
 
-
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Use Here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 y_test, y_pred = deep(X,y)
 scorer(y_test, y_pred)
@@ -275,4 +270,3 @@ print('\n\nAverage MAPE:  ' , round(np.mean(mape_mean),3))
 print('Average R Square:' , round(np.mean(r2_mean),1))
 print(mape_mean)
 print(r2_mean)
-
