@@ -1,3 +1,13 @@
+##############################################################
+# This code has been used to generate the results taht we reported
+# in the conference paper with the following details:
+# Authors: Oguz Toragay, Shaheen Pouya, Mehrdad Mohammadi
+# Title: How Do Machine Learning Models Perform in
+# Predicting the Solution Time for Optimization
+# Problems? Case of Job Shop Scheduling Problem.
+# Please cite our paper if you use the provided code 
+##############################################################
+
 import pandas as pd
 import numpy as np
 import random
